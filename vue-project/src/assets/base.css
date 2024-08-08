@@ -1,12 +1,10 @@
-
 :root {
-  --primary-color: #e85a4f;
-  --secondary-color: #e98074;
-  --accent-color: #d8c3a5;
-  --background-color: #eae7dc;
-  --error-color: #A73649;
-  --text-color: #8e8d8a;
-  --success-color: #279251;
+  --primary-color: #9face6;
+  --secondary-color: #407687;
+  --background-color: #FDFBFA;
+  --error-color: #D13A55; 
+  --text-color: #394C5E;
+  --success-color: #94cda4;
 }
 
 *,
@@ -25,12 +23,15 @@ body {
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lilita One", sans-serif;
 }
