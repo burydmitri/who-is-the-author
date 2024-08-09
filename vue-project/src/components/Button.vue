@@ -1,8 +1,23 @@
 <template>
-  <button class="button">
+  <button class="button" :class="modifications">
     <slot />
   </button>
 </template>
+
+<script>
+export default {
+  props: {
+    type: String,
+  },
+  computed: {
+    modifications() {
+      return {
+        'button--danger': !!this.type,
+      };
+    },
+  },
+};
+</script>
 
 <style lang="less" scoped>
 .button {
@@ -21,6 +36,15 @@
   }
   &:active {
     transform: scale(1.1);
+  }
+  &--danger {
+    background: var(--error-color);
+    border: 2px solid var(--error-color);
+
+    &:hover {
+      color: var(--error-color);
+      background: transparent;
+    }
   }
 }
 </style>

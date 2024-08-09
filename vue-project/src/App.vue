@@ -2,15 +2,17 @@
   <main class="app">
     <Intro class="app__intro"/>
     <Cards class="app__cards"/>
+    <Repeat />
   </main>
 </template>
 
 <script>
 import Intro from './components/Intro.vue'
 import Cards from './components/Cards.vue'
+import Repeat from './components/Repeat.vue'
 
 export default {
-  components: { Intro, Cards }
+  components: { Intro, Cards, Repeat }
 }
 </script>
 
@@ -27,8 +29,9 @@ export default {
   margin: 0 auto;
   padding: 300px 20px 20px;
 
-  &__intro {
+  &__intro, &__cards {
     margin-bottom: 50px;
   }
+
 }
 </style>
