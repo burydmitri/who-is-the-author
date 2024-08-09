@@ -1,25 +1,34 @@
 <template>
   <main class="app">
-    <Intro />
+    <Intro class="app__intro"/>
+    <Cards class="app__cards"/>
   </main>
 </template>
 
 <script>
 import Intro from './components/Intro.vue'
+import Cards from './components/Cards.vue'
+
 export default {
-  components: { Intro }
+  components: { Intro, Cards }
 }
 </script>
 
 <style lang="less" scoped>
 .app {
+  width: 100%;
+  max-width: 1080px;
   min-height: 100vh;
-  height: 100%;
-  width: 100vw;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  margin: 0 auto;
+  padding: 300px 20px 20px;
+
+  &__intro {
+    margin-bottom: 50px;
+  }
 }
 </style>

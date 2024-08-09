@@ -4,11 +4,18 @@
     <p class="intro__subtitle">Try to guess the authors of the artistic works of art!</p>
 
     <div class="intro__wrapper">
-      <button class="intro__button">Learn new</button>
-      <button class="intro__button">Repeat</button>
+      <Button>Learn new</Button>
+      <Button>Repeat</Button>
     </div>
   </div>
 </template>
+
+<script>
+import Button from './Button.vue'
+export default {
+  components: { Button }
+}
+</script>
 
 <style lang="less" scoped>
 .intro {
@@ -26,26 +33,6 @@
     gap: 20px;
     display: flex;
     justify-content: center;
-  }
-
-  &__button {
-    width: 40%;
-    font-weight: 700;
-    color: var(--background-color);
-    background: var(--primary-color);
-
-    padding: 10px;
-
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-
-    &:hover {
-        color: var(--text-color);
-        background: transparent;
-    }
-    &:active {
-        transform: scale(1.1);
-    }
   }
 }
 </style>
