@@ -1,26 +1,25 @@
 <template>
-  <main class="main">
-    <h1 class="main__title">Hello, World!</h1>
+  <main class="app">
+    <Intro />
   </main>
 </template>
 
-<script >
+<script>
+import Intro from './components/Intro.vue'
+export default {
+  components: { Intro }
+}
 </script>
 
 <style lang="less" scoped>
-  .main {
-    height: 100vh;
-    width: 100%;
+.app {
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    &__title {
-      font-size: 52px;
-
-      color: var(--primary-color)
-    }
-  }
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 </style>
